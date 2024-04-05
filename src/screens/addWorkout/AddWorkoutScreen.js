@@ -1,10 +1,26 @@
 import React from 'react';
 import { View, Text, FlatList, TouchableOpacity } from 'react-native';
 import { exerciseOptions } from '../../data/exercises.js';
-export const AddWorkout = ({navigation}) => {
+import { storeData, getData } from '../../stores/asyncStorage.js';
+
+export const AddWorkoutScreen = ({navigation}) => {
     console.log(exerciseOptions);
     return (
         <View style={styles.container}>
+            <TouchableOpacity style={styles.listItem} onPress={() => {
+                getData().then(data => {
+                    console.log(data);
+                });
+            }}>
+                <Text style={styles.listItemText}>Get Data</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.listItem} onPress={() => {
+                storeData({foo: "asas"});
+                console.log("meme");
+            }
+            }>
+                <Text style={styles.listItemText}>Store Data</Text>
+            </TouchableOpacity>
             <Text style={styles.title}>Add Workout</Text>
             <Text style={styles.text}>Select an exercise to add to your workout:</Text>
             <FlatList
