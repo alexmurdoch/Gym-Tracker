@@ -2,11 +2,11 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import {Colors} from '../styles/Colors.js';
 import { menuOptions } from '../screens/home/options.js';
-export const HomeButton = ({title, navigation}) => {
-    console.log(navigation);
+export const HomeButton = ({title, navigation, routeName}) => {
+    console.log(routeName);
     return (
         <View style={styles.button}>
-            <TouchableOpacity onPress={() => navigation.navigate("AddWorkout")}>
+            <TouchableOpacity onPress={() => navigation.navigate(routeName)}>
             <Text style={styles.buttonText}>{title}</Text>
 
             </TouchableOpacity>

@@ -1,6 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import { HomeScreen } from '../screens/home/HomeScreen.js';
 import { AddWorkoutScreen } from '../screens/addWorkout/AddWorkoutScreen.js';
+import { MyWorkoutsScreen } from '../screens/myWorkouts/MyWorkoutsScreen.js';
 const MyStack  = createStackNavigator();
 
 export const ScreenNavigator = ({navigation}) => {
@@ -8,6 +9,7 @@ export const ScreenNavigator = ({navigation}) => {
         <MyStack.Navigator screenOptions={{ headerShown: false }}>
             <MyStack.Screen name="Home" component={HomeScreen} />
             <MyStack.Screen name="AddWorkout" component={AddWorkoutScreen} />
+            <MyStack.Screen name="MyWorkouts" component={MyWorkoutsScreen} />
             {/* <MyStack.Screen name="Account" component={LoginScreen} /> */}
             { /* rename above screen its supposed to be account screen */}
             

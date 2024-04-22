@@ -1,8 +1,8 @@
 export const menuOptions = [
-    "TODAYS WORKOUT",
-    "MY WORKOUTS",
-    "MY PROGRESS",
-    "MY PROFILE",
+    {"TODAYS WORKOUT": "AddWorkout"},
+    {"MY WORKOUTS": "MyWorkouts"},
+    {"MY PROGRESS": "MyProgress"},
+    {"MY PROFILE": "MyProfile"},
 ];
 
 

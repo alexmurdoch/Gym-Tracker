@@ -28,6 +28,7 @@ export const storeData = async (value) => {
 export const getData = async () => {
   try {
     const jsonValue = await AsyncStorage.getItem('@GymApp')
+    console.log(jsonValue);
     return jsonValue != null ? JSON.parse(jsonValue) : null;
   } catch(e) {
     // error reading value
@@ -35,3 +36,5 @@ export const getData = async () => {
 }
 
 // Usage:
+
+
